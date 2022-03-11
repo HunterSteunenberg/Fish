@@ -4,7 +4,7 @@ let height = 6;
 let lenght = 6;
 
 player.onChat("Block", function() {
-    player.say("Creating shelter... please wait.");
+    player.say("Creating block... please wait.");
 let myPosition = positions.groundPosition(pos(0,0,0));
 player.say(myPosition);
         for(let x =1; x <width; x++){
@@ -16,7 +16,19 @@ player.say(myPosition);
                 "XYZ" + newPos.getValue(Axis.X)+ "  "
                 + newPos.getValue(Axis.Y) + "  "
                 +newPos.getValue(Axis.Z)  ;
-                blocks.place(STONE_BRICKS, world(newPos.getValue(Axis.X) ,
+                blocks.place(RED_NETHER_BRICKS, world(newPos.getValue(Axis.X) ,
+                newPos.getValue(Axis.Y), newPos.getValue(Axis.Z)));
+                }}}
+                for(let x =2; x <width - 1; x++){
+            for(let y =2; y <height - 1; y++){
+                for (let z =2; z <lenght - 1; z++){
+                let newPos = positions.add(myPosition, pos(x,y,z,));
+                //player.say("My Postion"+myPosition.toString()) 
+                +"New" + newPos.toString() + "Cords" + newPos +
+                "XYZ" + newPos.getValue(Axis.X)+ "  "
+                + newPos.getValue(Axis.Y) + "  "
+                +newPos.getValue(Axis.Z)  ;
+                blocks.place(AIR, world(newPos.getValue(Axis.X) ,
                 newPos.getValue(Axis.Y), newPos.getValue(Axis.Z)));
                 }}}
 player.say("Block is now complete.  Thank you for waiting.")})
