@@ -16,7 +16,7 @@ player.say(myPosition);
                 "XYZ" + newPos.getValue(Axis.X)+ "  "
                 + newPos.getValue(Axis.Y) + "  "
                 +newPos.getValue(Axis.Z)  ;
-                blocks.place(RED_NETHER_BRICKS, world(newPos.getValue(Axis.X) ,
+                blocks.place(RED_NETHER_BRICK, world(newPos.getValue(Axis.X) ,
                 newPos.getValue(Axis.Y), newPos.getValue(Axis.Z)));
                 }}}
                 for(let x =2; x <width - 1; x++){
