@@ -32,3 +32,19 @@ player.say(myPosition);
                 newPos.getValue(Axis.Y), newPos.getValue(Axis.Z)));
                 }}}
 player.say("Block is now complete.  Thank you for waiting.")})
+
+//warning, this code is a bit buggy, the stone cutter has trouble placing.
+let buildBlocks = [91,245,215,BLUE_WOOL]
+player.onChat("MyFavourites", function(){
+player.say("These are some of my personal favourites, would you like to see them?");
+let myPosition = positions.groundPosition(pos(0,0,0));
+for (let z =0; z<= buildBlocks.length+1; z++)
+{
+    let newPos = positions.add(myPosition, pos (0,0,z));
+    player.say("My Position"+myPosition.toString()+
+    "New" + newPos.toString() + "Cords" + newPos +
+    newPos.getValue(Axis.Z) );
+    blocks.place(buildBlocks[z], world(newPos.getValue(Axis.X),
+    newPos.getValue(Axis.Y), newPos.getValue(Axis.Z)));
+}
+});
