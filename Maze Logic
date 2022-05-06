@@ -1,0 +1,39 @@
+player.onChat("maze", function() {
+     agent.teleport(world(2,4,3), SOUTH);
+
+     for (let i = 0; i < 100000; i++) {
+         solveMaze();
+         i++;
+     }
+
+})
+
+function solveMaze() {
+
+player.say("Taking a Step to Solve")
+//if able to Move forward 1 step
+if (!agent.detect(AgentDetection.Block, FORWARD)){
+    player.say("1-Able to move forward");
+    agent.move(FORWARD, 1);
+//If able to move left move left
+} else if (!agent.detect(AgentDetection.Block, LEFT)){
+    player.say("2-Able to move left");
+    agent.turn(TurnDirection.Left);
+    agent.move(FORWARD, 1);
+//if can't move left try to move right
+} else if (!agent.detect(AgentDetection.Block, RIGHT)){
+    player.say("3-Able to move Right");
+    agent.turn(TurnDirection.Right);
+    agent.move(FORWARD, 1);
+//do a 180
+} else {
+        player.say("4-Doing a 180");
+        agent.turn(TurnDirection.Left);
+        agent.turn(TurnDirection.Left);
+
+    }
+//Move forward,
+//If there is no block on the left turn left and move forward if possible else, move forward.
+//If there is a block on the left and forward, turn right and move forward on if possible.
+//If there is a block on the left, forward, and right, turn 180 degrees.
+}
