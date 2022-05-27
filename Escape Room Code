@@ -1,6 +1,15 @@
-player.onChat("Open Sesame", function() {
-    blocks.place(AIR, pos(-11, 4, 3))
-    blocks.place(AIR, pos(-11, 4, 4))
-    blocks.place(AIR, pos(-11, 5, 3))
-    blocks.place(AIR, pos(-11, 5, 4)) 
+player.teleport(world(-2, 4, 4))
+
+if (player.position()) world(-13, 4, 3) || world(-13, 4, 4)
+    blocks.place(LIGHT_GRAY_CONCRETE, world(-12, 4, 3))
+    blocks.place(LIGHT_GRAY_CONCRETE, world(-12, 4, 4))
+    blocks.place(LIGHT_GRAY_CONCRETE, world(-12, 5, 3))
+    blocks.place(LIGHT_GRAY_CONCRETE, world(-12, 5, 4))
+
+player.onChat("Open Sesame", function(
+) {
+    blocks.place(AIR, world(-11, 4, 3))
+    blocks.place(AIR, world(-11, 4, 4))
+    blocks.place(AIR, world(-11, 5, 3))
+    blocks.place(AIR, world(-11, 5, 4))
 })
