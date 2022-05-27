@@ -1,0 +1,6 @@
+player.onChat("Open Sesame", function() {
+    blocks.place(AIR, pos(-11, 4, 3))
+    blocks.place(AIR, pos(-11, 4, 4))
+    blocks.place(AIR, pos(-11, 5, 3))
+    blocks.place(AIR, pos(-11, 5, 4)) 
+})
