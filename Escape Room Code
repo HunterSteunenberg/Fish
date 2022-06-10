@@ -5,6 +5,7 @@ player.onChat("Start", function(
 
 player.onChat("Open Sesame", function(
 ) {
+    blocks.place(REDSTONE_BLOCK, world(-15, 9, 1))
     blocks.place(AIR, world(-11, 4, 3))
     blocks.place(AIR, world(-11, 4, 4))
     blocks.place(AIR, world(-11, 5, 3))
@@ -13,6 +14,7 @@ player.onChat("Open Sesame", function(
     blocks.place(AIR, world(-12, 4, 4))
     blocks.place(AIR, world(-12, 5, 3))
     blocks.place(AIR, world(-12, 5, 4))
+    blocks.place(AIR, world(-15, 9, 1))
 })
 
 player.onTravelled(WALK, function() {
@@ -23,8 +25,9 @@ player.onTravelled(WALK, function() {
     blocks.place(LIGHT_GRAY_CONCRETE, world(-12, 5, 4))
 
 })
-player.onTravelled(WALK, function() {
-    if (player.position()) world(-25, 1, 17)
 
-    player.teleport (world(0,256,0))
-})
+player.onTravelled(WALK, function() {
+
+    if (player.position().getValue(Axis.X) ==  world(-25, 1, 17).getValue(Axis.X)&& (player.position())  .getValue(Axis.Y) && (player.position()) .getValue(Axis.Z)){
+
+    (player.teleport (world(0,255,0)))}})
