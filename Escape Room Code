@@ -1,6 +1,10 @@
 player.onChat("Start", function(
 ){
     player.teleport (world(-2,4,4))
+    blocks.place(LIGHT_GRAY_CONCRETE, world(-11, 4, 3))
+    blocks.place(LIGHT_GRAY_CONCRETE, world(-11, 4, 4))
+    blocks.place(LIGHT_GRAY_CONCRETE, world(-11, 5, 3))
+    blocks.place(LIGHT_GRAY_CONCRETE, world(-11, 5, 4))
 })
 
 player.onChat("Open Sesame", function(
@@ -19,13 +23,13 @@ player.onChat("Open Sesame", function(
 
 player.onTravelled(WALK, function() {
     if (player.position().getValue(Axis.X) ==  world(-12, 4, 3).getValue(Axis.X)&& (player.position()) .getValue(Axis.Y) && (player.position()) .getValue(Axis.Z))
-    (blocks.place(LIGHT_GRAY_CONCRETE, world(-11, 4, 3))
-    (blocks.place(LIGHT_GRAY_CONCRETE, world(-11, 4, 4))
-    (blocks.place(LIGHT_GRAY_CONCRETE, world(-11, 5, 3))
-    (blocks.place(LIGHT_GRAY_CONCRETE, world(-11, 5, 4))
+    (blocks.place(LIGHT_GRAY_CONCRETE, world(-11, 4, 3)));
+    (blocks.place(LIGHT_GRAY_CONCRETE, world(-11, 4, 4)));
+    (blocks.place(LIGHT_GRAY_CONCRETE, world(-11, 5, 3)));
+    (blocks.place(LIGHT_GRAY_CONCRETE, world(-11, 5, 4)));
 
 
 (player.onTravelled(WALK, function() {
 
     if (player.position().getValue(Axis.X) ==  world(-25, 1, 17).getValue(Axis.X)&& (player.position())  .getValue(Axis.Y) && (player.position()) .getValue(Axis.Z)){
-    (player.teleport (world(0,255,0)))}})))
+    (player.teleport (world(0,255,0)))}}))});
